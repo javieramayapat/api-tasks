@@ -12,7 +12,7 @@ class User(Base):
     last_name = Column(String(50), nullable=False)
     username = Column(String(100), nullable=False)
     email = Column(String(150), nullable=False)
-    password = Column(String(50), nullable=False)
+    password = Column(String(200), nullable=False)
 
     trips = relationship("Task")
 

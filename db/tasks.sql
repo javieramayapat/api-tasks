@@ -9,7 +9,7 @@ CREATE TABLE users(
     last_name varchar(50) NOT NULL,
     username varchar(100) NOT NULL UNIQUE,
     email varchar(150) NOT NULL UNIQUE,
-    password varchar(50) NOT NULL,
+    password varchar(200) NOT NULL,
     PRIMARY KEY (id)
 );
 
@@ -26,7 +26,7 @@ CREATE TABLE tasks (
 );
 
 
-INSERT INTO users (id, name, last_name, username, email, password) VALUES (1, 'Javier', 'Amaya','javieramayapat', 'javieramayapat@gmail.com', 'easypassword');
+INSERT INTO users (id, name, last_name, username, email, password) VALUES (1, 'Javier', 'Amaya','javieramayapat', 'javieramayapat@gmail.com', '$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW');
 
 
 INSERT INTO tasks (user_id, title, description, due_date, status)
