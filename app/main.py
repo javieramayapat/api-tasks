@@ -1,4 +1,5 @@
 from fastapi import FastAPI, status
+from .routes import task_router
 
 app = FastAPI(title="📑 Task API 📑",
               version="1.0",
@@ -9,3 +10,5 @@ app = FastAPI(title="📑 Task API 📑",
 def index():
     return {"Hello": "Welcome to Task API 📑"}
 
+
+app.include_router(task_router.router, prefix="/api/v1")
